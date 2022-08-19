@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()]
-})
+  plugins: [
+    vueJsx({
+      // options are passed on to @vue/babel-plugin-jsx
+      mergeProps: true,
+      transformOn: true,
+    }),
+    vue(),
+  ],
+});
