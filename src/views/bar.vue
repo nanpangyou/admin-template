@@ -2,12 +2,12 @@
   <div>bar</div>
 </template>
 <script lang="ts">
-export default {
-  name: "Bar"
-};
+  export default {
+    name: "Bar"
+  };
 </script>
 <style lang="scss" scoped>
-div {
-  color: blue;
-}
+  div {
+    color: blue;
+  }
 </style>
