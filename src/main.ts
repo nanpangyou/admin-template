@@ -5,7 +5,7 @@ import { Foo } from "./views/foo";
 import Bar from "./views/bar.vue";
 import ccc from "./views/ccc.vue";
 
-import "element-plus/dist/index.css";
+// import "element-plus/dist/index.css";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", component: Foo },
