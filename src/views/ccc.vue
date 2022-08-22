@@ -1,7 +1,6 @@
 <template>
   <div>ccc</div>
-  <ElButton>xxx</ElButton>
-  <el-button type="warning" round>Default</el-button>
+  <ElButton type="success" round>Default</ElButton>
 </template>
 
 <script setup lang="ts">

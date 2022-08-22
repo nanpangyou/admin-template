@@ -1,6 +1,6 @@
 import { FunctionalComponent } from "vue";
 import AppMain from "./components/AppMain.vue";
-import SideBar from "./components/sidebar/SideBar.vue";
+import { SideBar } from "./components/sidebar/SideBar";
 import s from "./index.module.scss";
 
 export const Layout: FunctionalComponent = () => (
@@ -9,3 +9,5 @@ export const Layout: FunctionalComponent = () => (
     <AppMain></AppMain>
   </div>
 );
+
+Layout.displayName = "Layout";

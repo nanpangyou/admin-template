@@ -9,9 +9,7 @@
   div {
     color: blue;
   }
-  .xxx {
-    ::v-deep(.el-button--warning) {
-      background: red;
-    }
+  ::v-deep(.el-button--warning) {
+    background: red;
   }
 </style>
