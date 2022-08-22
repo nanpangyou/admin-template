@@ -3,6 +3,7 @@ import App from "./App.vue";
 import { router } from "./config/RouterConfig";
 // 引入重置样式
 import "./theme/reset.scss";
+import "./theme/index.scss";
 import "element-plus/dist/index.css";
 
 const app = createApp(App);

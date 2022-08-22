@@ -1,8 +1,18 @@
+@import "../../../theme/variables.scss";
 .sidebar_content {
   // background-color: #fff;
-  padding: 20px;
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: $sideBarWidth !important;
+  background: $menuBg;
+  height: 100%;
+  position: fixed;
+  font-size: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  overflow: hidden;
+  box-shadow: 0 0 1px #888;
 }

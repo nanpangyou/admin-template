@@ -4,7 +4,7 @@ import { SideBar } from "./components/sidebar/SideBar";
 import s from "./index.module.scss";
 
 export const Layout: FunctionalComponent = () => (
-  <div class={s.wrapper}>
+  <div class={s.layout_wrapper}>
     <SideBar />
     <AppMain></AppMain>
   </div>
