@@ -3,5 +3,6 @@ module.exports = {
   singleQuote: false,
   arrowParens: "avoid",
   trailingComma: "none",
-  vueIndentScriptAndStyle: true
+  vueIndentScriptAndStyle: true,
+  printWidth: 120
 };
