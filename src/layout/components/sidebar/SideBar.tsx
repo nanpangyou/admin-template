@@ -2,6 +2,7 @@ import { ElMenu, ElMenuItem, ElMenuItemGroup, ElScrollbar, ElSubMenu } from "ele
 import { defineComponent, ref } from "vue";
 import { RouteLocationNormalizedLoaded, Router, RouteRecordRaw, RouterLink, useRoute, useRouter } from "vue-router";
 import s from "./SideBar.module.scss";
+import { SideBarItem } from "./sideBarItem";
 
 export const SideBar = defineComponent({
   setup(props, ctx) {
@@ -17,6 +18,8 @@ export const SideBar = defineComponent({
     // </ElMenuItemGroup>
     // props可作插槽作用域的作用
     // };
+    console.log(allRouter.value);
+    const isCollapse = ref(false);
     const handleOpen = (key: string, keyPath: string[]) => {
       console.log("open", key, keyPath);
     };
@@ -41,20 +44,10 @@ export const SideBar = defineComponent({
       <>
         <div class={s.sidebar_content}>
           <ElScrollbar>
-            <ElMenu unique-opened onOpen={handleOpen} onClose={handleClose}>
-              {allRouter.value.map(i => {
-                if (i.children?.length) {
-                  return <ElSubMenu index={Math.random() + ""}>{create(i)}</ElSubMenu>;
-                } else {
-                  return (
-                    <RouterLink to={i.path}>
-                      <ElMenuItem index={Math.random() + ""}>
-                        <span>{i.meta?.title}</span>
-                      </ElMenuItem>
-                    </RouterLink>
-                  );
-                }
-              })}
+            <ElMenu unique-opened onOpen={handleOpen} onClose={handleClose} collapse={isCollapse.value}>
+              {allRouter.value.map(item => (
+                <SideBarItem item={item} />
+              ))}
             </ElMenu>
           </ElScrollbar>
         </div>
