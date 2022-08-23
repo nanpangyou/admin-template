@@ -18,7 +18,6 @@ export default defineComponent({
     }
   },
   setup(props, { attrs }) {
-    console.log(props, attrs);
     if (props.uni) {
       return () =>
         h(
