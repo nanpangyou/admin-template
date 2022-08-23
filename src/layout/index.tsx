@@ -1,5 +1,5 @@
 import { FunctionalComponent } from "vue";
-import AppMain from "./components/AppMain.vue";
+import { AppMain } from "./components/AppMain";
 import { SideBar } from "./components/sidebar/SideBar";
 import s from "./index.module.scss";
 

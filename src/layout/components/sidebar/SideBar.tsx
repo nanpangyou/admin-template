@@ -17,6 +17,12 @@ export const SideBar = defineComponent({
     // </ElMenuItemGroup>
     // props可作插槽作用域的作用
     // };
+    const handleOpen = (key: string, keyPath: string[]) => {
+      console.log("open", key, keyPath);
+    };
+    const handleClose = (key: string, keyPath: string[]) => {
+      console.log("close", key, keyPath);
+    };
     const create = (item: RouteRecordRaw) => {
       return {
         title: () => item.meta?.title,
@@ -35,46 +41,7 @@ export const SideBar = defineComponent({
       <>
         <div class={s.sidebar_content}>
           <ElScrollbar>
-            <ElMenu unique-opened>
-              <ElMenuItem index="42">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="52">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="62">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="22">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="24">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="28">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="82">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="72">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="9">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="92">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="29">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="277">
-                <span>11111111111111</span>
-              </ElMenuItem>
-              <ElMenuItem index="2776">
-                <span>11111111111111</span>
-              </ElMenuItem>
+            <ElMenu unique-opened onOpen={handleOpen} onClose={handleClose}>
               {allRouter.value.map(i => {
                 if (i.children?.length) {
                   return <ElSubMenu index={Math.random() + ""}>{create(i)}</ElSubMenu>;

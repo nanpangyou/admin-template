@@ -1,7 +1,7 @@
 @import "../theme/variables.scss";
 .layout_wrapper {
   height: 100%;
-  width: calc(100% - $sideBarWidth - 5px);
+  width: calc(100% - $sideBarWidth);
   display: flex;
-  margin-left: calc($sideBarWidth + 5px);
+  margin-left: $sideBarWidth;
 }
