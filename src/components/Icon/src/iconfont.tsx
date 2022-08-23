@@ -7,10 +7,19 @@ export default defineComponent({
     icon: {
       type: String,
       default: ""
+    },
+    svg: {
+      type: Boolean,
+      default: false
+    },
+    uni: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, { attrs }) {
-    if (Object.keys(attrs).includes("uni") || attrs?.iconType === "uni") {
+    console.log(props, attrs);
+    if (props.uni) {
       return () =>
         h(
           "i",
@@ -20,7 +29,7 @@ export default defineComponent({
           },
           props.icon
         );
-    } else if (Object.keys(attrs).includes("svg") || attrs?.iconType === "svg") {
+    } else if (props.svg) {
       return () =>
         h(
           "svg",
@@ -44,37 +53,4 @@ export default defineComponent({
         });
     }
   }
-  // render() {
-  //   const attrs = this.$attrs;
-  //   if (Object.keys(attrs).includes("uni") || attrs?.iconType === "uni") {
-  //     return h(
-  //       "i",
-  //       {
-  //         class: "iconfont",
-  //         ...attrs
-  //       },
-  //       this.icon
-  //     );
-  //   } else if (Object.keys(attrs).includes("svg") || attrs?.iconType === "svg") {
-  //     return h(
-  //       "svg",
-  //       {
-  //         class: "icon-svg",
-  //         "aria-hidden": true
-  //       },
-  //       {
-  //         default: () => [
-  //           h("use", {
-  //             "xlink:href": `#${this.icon}`
-  //           })
-  //         ]
-  //       }
-  //     );
-  //   } else {
-  //     return h("i", {
-  //       class: `iconfont ${this.icon}`,
-  //       ...attrs
-  //     });
-  //   }
-  // }
 });
