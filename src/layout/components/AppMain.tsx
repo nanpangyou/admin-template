@@ -7,7 +7,7 @@ export const AppMain = defineComponent({
     const HeaderBar = () => (
       <div class={s.header_bar_wrapper}>
         <div class={s.left_side}>
-          <Hamburger class="hamburger-container" onToggleClick="toggleSideBar" />
+          <Hamburger class="hamburger-container" isActive />
           <div>面包</div>
         </div>
         <div class={s.right_side}>操作部分</div>

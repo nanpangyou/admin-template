@@ -18,6 +18,9 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "17.0.3",
+    "@iconify-icons/ep": "1.2.8",
+    "@iconify-icons/ri": "1.2.3",
+    "@iconify/vue": "3.2.1",
     "@typescript-eslint/eslint-plugin": "5.33.1",
     "@typescript-eslint/parser": "5.33.1",
     "@vitejs/plugin-vue": "3.0.3",
@@ -41,6 +44,7 @@
     "unplugin-vue-components": "0.22.4",
     "vite": "3.0.8",
     "vite-plugin-vue-setup-extend": "0.4.0",
+    "vite-svg-loader": "3.4.0",
     "vue-eslint-parser": "9.0.3",
     "vue-tsc": "0.40.1"
   }
