@@ -45,9 +45,22 @@ export const SideBar = defineComponent({
         <div class={s.sidebar_content}>
           <ElScrollbar>
             <ElMenu unique-opened onOpen={handleOpen} onClose={handleClose} collapse={isCollapse.value}>
-              {allRouter.value.map(item => (
+              {allRouter.value.map(i => {
+                if (i.children?.length) {
+                  return <ElSubMenu index={Math.random() + ""}>{create(i)}</ElSubMenu>;
+                } else {
+                  return (
+                    <RouterLink to={i.path}>
+                      <ElMenuItem index={Math.random() + ""}>
+                        <span>{i.meta?.title}</span>
+                      </ElMenuItem>
+                    </RouterLink>
+                  );
+                }
+              })}
+              {/* {allRouter.value.map(item => (
                 <SideBarItem item={item} />
-              ))}
+              ))} */}
             </ElMenu>
           </ElScrollbar>
         </div>
