@@ -5,6 +5,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { viteMockServe } from "vite-plugin-mock";
+import removeConsole from "vite-plugin-remove-console";
 // doc: https://www.npmjs.com/package/vite-svg-loader
 import svgLoader from "vite-svg-loader";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
@@ -37,6 +38,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         transformOn: true
       }),
       vue(),
+      removeConsole(),
       viteMockServe({
         mockPath: "mock",
         localEnabled: command === "serve"

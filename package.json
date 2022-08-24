@@ -48,6 +48,7 @@
     "unplugin-vue-components": "0.22.4",
     "vite": "3.0.8",
     "vite-plugin-mock": "2.9.6",
+    "vite-plugin-remove-console": "1.1.0",
     "vite-plugin-vue-setup-extend": "0.4.0",
     "vite-svg-loader": "3.4.0",
     "vue-eslint-parser": "9.0.3",

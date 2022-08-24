@@ -33,6 +33,7 @@ specifiers:
   unplugin-vue-components: 0.22.4
   vite: 3.0.8
   vite-plugin-mock: 2.9.6
+  vite-plugin-remove-console: 1.1.0
   vite-plugin-vue-setup-extend: 0.4.0
   vite-svg-loader: 3.4.0
   vue: 3.2.37
@@ -77,6 +78,7 @@ devDependencies:
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.22.4_dvljphzhr7w7wkjj4bc3apkhsm
   vite: registry.npmmirror.com/vite/3.0.8_sass@1.54.4
   vite-plugin-mock: registry.npmmirror.com/vite-plugin-mock/2.9.6_hvjdh5ed4ipbd45q2it2qcy4vq
+  vite-plugin-remove-console: registry.npmmirror.com/vite-plugin-remove-console/1.1.0
   vite-plugin-vue-setup-extend: registry.npmmirror.com/vite-plugin-vue-setup-extend/0.4.0_vite@3.0.8
   vite-svg-loader: registry.npmmirror.com/vite-svg-loader/3.4.0
   vue-eslint-parser: registry.npmmirror.com/vue-eslint-parser/9.0.3_eslint@8.22.0
@@ -5111,6 +5113,12 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: true
+
+  registry.npmmirror.com/vite-plugin-remove-console/1.1.0:
+    resolution: {integrity: sha512-FZ0gLEsRqgHPCl+blHpT3h004+InKrGddmBXTfs7Cj/xWY7FdHpL9Zc9kgjxh8zIzjZ/MblsPDDEqg5BVHIXDA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-plugin-remove-console/-/vite-plugin-remove-console-1.1.0.tgz}
+    name: vite-plugin-remove-console
+    version: 1.1.0
     dev: true
 
   registry.npmmirror.com/vite-plugin-vue-setup-extend/0.4.0_vite@3.0.8:
