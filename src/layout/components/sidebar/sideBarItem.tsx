@@ -8,17 +8,17 @@ export const SideBarItem = defineComponent({
   setup(props, context) {
     console.log(props, props.item as childrenType);
     return () => {
-      if (props.item.children?.length) {
-        return <ElSubMenu index={Math.random() + ""}>{create(item)}</ElSubMenu>;
-      } else {
-        return (
-          <RouterLink to={item.path}>
-            <ElMenuItem index={Math.random() + ""}>
-              <span>{item.meta?.title}</span>
-            </ElMenuItem>
-          </RouterLink>
-        );
-      }
+      // if (props.item.children?.length) {
+      //   return <ElSubMenu index={Math.random() + ""}>{create(item)}</ElSubMenu>;
+      // } else {
+      //   return (
+      //     <RouterLink to={item.path}>
+      //       <ElMenuItem index={Math.random() + ""}>
+      //         <span>{item.meta?.title}</span>
+      //       </ElMenuItem>
+      //     </RouterLink>
+      //   );
+      // }
       <div>xx</div>;
     };
   }
