@@ -6,3 +6,14 @@ declare module "*.vue" {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+type JSONValue = null | string | boolean | number | JSONValue[] | Record<string, JSONValue>;
+
+interface ImportMetaEnv {
+  readonly VITE_PROXY_DOMAIN: string;
+  // 更多环境变量...
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
