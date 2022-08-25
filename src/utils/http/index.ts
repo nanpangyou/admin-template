@@ -32,8 +32,8 @@ export class Http {
   }
   post<R = unknown>(
     url: string,
-    params?: Record<string, JSONValue>,
     data?: Record<string, JSONValue>,
+    params?: Record<string, JSONValue>,
     config?: AxiosRequestConfig
   ) {
     return this.request<R>(url, params, data, { method: "post", ...config });
