@@ -41,5 +41,14 @@ export default [
     response: () => {
       return statusList;
     }
+  },
+  {
+    url: "/mock/api/login",
+    method: "post",
+    response: () => {
+      return {
+        userName: "xxx"
+      };
+    }
   }
 ] as MockMethod[];

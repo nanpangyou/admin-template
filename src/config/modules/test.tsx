@@ -1,6 +1,7 @@
+import { RouteRecordRaw } from "vue-router";
 import { Layout } from "../../layout/index";
 
-const errorRouter = {
+const errorRouter: RouteRecordRaw = {
   path: "/error",
   component: Layout,
   redirect: "/error/403",

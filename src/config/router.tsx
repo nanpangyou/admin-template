@@ -4,6 +4,7 @@ import Bar from "../views/bar.vue";
 import ccc from "../views/ccc.vue";
 import Xxx from "../views/Xxx.vue";
 import { Layout } from "../layout";
+import { WhiteList } from "./modules/whitelist-router";
 import errorRouter from "./modules/test";
 
 export const routes: RouteRecordRaw[] = [
@@ -23,5 +24,6 @@ export const routes: RouteRecordRaw[] = [
       title: "xxxxx"
     }
   },
-  errorRouter
+  errorRouter,
+  ...WhiteList
 ];
