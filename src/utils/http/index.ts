@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import NProgress from "../nprogress";
+import { getItem } from "../storage";
 
 export class Http {
   instance: AxiosInstance;
@@ -42,6 +43,11 @@ export const http = new Http(import.meta.env.VITE_PROXY_DOMAIN);
 export const MockHttp = new Http("");
 
 http.instance.interceptors.request.use(config => {
+  // 全局自动添加token
+  const token = getItem("token");
+  if (token) {
+    config.headers.Authorization = "Bearer " + token;
+  }
   NProgress.start();
   return config;
 });
