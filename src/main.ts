@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { router } from "./config/RouterConfig";
+import { setupStore } from "/@/store/index";
 // 引入重置样式
 import "./theme/reset.scss";
 import "./theme/index.scss";
@@ -15,5 +16,6 @@ const app = createApp(App);
 app.component("IconifyIconOffline", IconifyIconOffline);
 app.component("IconifyIconOnline", IconifyIconOnline);
 app.component("FontIcon", FontIcon);
+setupStore(app);
 app.use(router);
 app.mount("#app");
