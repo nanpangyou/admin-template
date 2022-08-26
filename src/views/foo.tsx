@@ -6,7 +6,7 @@ import { http, MockHttp } from "../utils/http/index";
 import { ElButton } from "element-plus";
 const cl = () => {
   http
-    .post("/getList", {}, {}, { _return_raw: true })
+    .post("/getUserInfo", { token: "adminToken" }, {}, { _return_raw: true })
     .then(res => {
       console.log(res);
     })

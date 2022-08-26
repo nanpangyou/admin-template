@@ -18,7 +18,6 @@ export const SideBar = defineComponent({
     // </ElMenuItemGroup>
     // props可作插槽作用域的作用
     // };
-    console.log(allRouter.value);
     const isCollapse = ref(false);
     const handleOpen = (key: string, keyPath: string[]) => {
       console.log("open", key, keyPath);

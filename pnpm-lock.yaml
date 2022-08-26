@@ -5,6 +5,7 @@ specifiers:
   '@iconify-icons/ep': 1.2.8
   '@iconify-icons/ri': 1.2.3
   '@iconify/vue': 3.2.1
+  '@types/lodash-es': 4.17.6
   '@types/mockjs': 1.0.6
   '@types/nprogress': 0.2.0
   '@typescript-eslint/eslint-plugin': 5.33.1
@@ -23,6 +24,9 @@ specifiers:
   eslint-plugin-vue: 9.3.0
   husky: 8.0.1
   lint-staged: 13.0.3
+  lodash: 4.17.21
+  lodash-es: 4.17.21
+  lodash-unified: 1.0.2
   mockjs: 1.1.0
   nprogress: 0.2.0
   postcss: 8.4.16
@@ -47,6 +51,9 @@ dependencies:
   '@types/mockjs': registry.npmmirror.com/@types/mockjs/1.0.6
   axios: registry.npmmirror.com/axios/0.27.2
   element-plus: registry.npmmirror.com/element-plus/2.2.13_vue@3.2.37
+  lodash: registry.npmmirror.com/lodash/4.17.21
+  lodash-es: registry.npmmirror.com/lodash-es/4.17.21
+  lodash-unified: registry.npmmirror.com/lodash-unified/1.0.2_3ib2ivapxullxkx3xftsimdk7u
   nprogress: registry.npmmirror.com/nprogress/0.2.0
   vue: registry.npmmirror.com/vue/3.2.37
   vue-router: registry.npmmirror.com/vue-router/4.1.3_vue@3.2.37
@@ -56,6 +63,7 @@ devDependencies:
   '@iconify-icons/ep': registry.npmmirror.com/@iconify-icons/ep/1.2.8
   '@iconify-icons/ri': registry.npmmirror.com/@iconify-icons/ri/1.2.3
   '@iconify/vue': registry.npmmirror.com/@iconify/vue/3.2.1_vue@3.2.37
+  '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.6
   '@types/nprogress': registry.npmmirror.com/@types/nprogress/0.2.0
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.33.1_vsoshirnpb7xw6mr7xomgfas2i
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
@@ -994,13 +1002,11 @@ packages:
     version: 4.17.6
     dependencies:
       '@types/lodash': registry.npmmirror.com/@types/lodash/4.14.184
-    dev: false
 
   registry.npmmirror.com/@types/lodash/4.14.184:
     resolution: {integrity: sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash/-/lodash-4.14.184.tgz}
     name: '@types/lodash'
     version: 4.14.184
-    dev: false
 
   registry.npmmirror.com/@types/minimist/1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/minimist/-/minimist-1.2.2.tgz}

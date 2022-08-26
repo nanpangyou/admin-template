@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 import NProgress from "../nprogress";
 
 export class Http {
@@ -8,25 +8,15 @@ export class Http {
       baseURL
     });
   }
-  request<R>(
+  request<R = unknown>(
     url: string,
     params?: Record<string, JSONValue>,
     data?: Record<string, JSONValue>,
     config?: AxiosRequestConfig
-  ) {
-    return new Promise((resolve, reject) => {
-      this.instance
-        .request<R>({ url, params, data, ...config })
-        .then(res => {
-          if (config?._return_raw) {
-            resolve(res);
-          } else {
-            resolve(res.data);
-          }
-        })
-        .catch(err => reject(err));
-    });
+  ): Promise<R> {
+    return this.instance.request({ url, params, data, ...config });
   }
+
   get<R = unknown>(url: string, params?: Record<string, JSONValue>, config?: AxiosRequestConfig) {
     return this.request<R>(url, params, { method: "get", ...config });
   }
@@ -57,5 +47,9 @@ http.instance.interceptors.request.use(config => {
 });
 http.instance.interceptors.response.use(response => {
   NProgress.done();
-  return response;
+  if (response.config._return_raw) {
+    return response;
+  } else {
+    return response.data;
+  }
 });

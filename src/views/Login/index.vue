@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { reactive } from "vue";
-import { http } from "/@/utils/http";
+import { useRouter } from "vue-router";
+import { login } from "/@/api/app";
+import { setItem } from "/@/utils/storage";
+const router = useRouter();
 const form = reactive({
   userName: "username",
   passWord: "password",
 });
-const login = () => {
-  console.log("login", form);
-  http.post("/login", form, { a: "x" }, { _return_raw: true }).then((res) => {
-    console.log("login success", res);
-  });
+const loginAction = async () => {
+  const data = await login(form);
+  setItem("token", data.token);
+  router.push("/");
 };
 </script>
 
@@ -29,7 +31,7 @@ const login = () => {
         ></ElInput>
       </ElFormItem>
     </ElForm>
-    <ElButton @click="login">登录</ElButton>
+    <ElButton @click="loginAction">登录</ElButton>
   </div>
 </template>
 
