@@ -33,6 +33,7 @@ specifiers:
   postcss: 8.4.16
   postcss-import: 14.1.0
   prettier: 2.7.1
+  rimraf: 3.0.2
   rollup: 2.78.1
   sass: 1.54.4
   typescript: 4.7.4
@@ -49,7 +50,6 @@ specifiers:
   vue-tsc: 0.40.1
 
 dependencies:
-  '@types/mockjs': registry.npmmirror.com/@types/mockjs/1.0.6
   axios: registry.npmmirror.com/axios/0.27.2
   element-plus: registry.npmmirror.com/element-plus/2.2.13_vue@3.2.37
   lodash: registry.npmmirror.com/lodash/4.17.21
@@ -66,6 +66,7 @@ devDependencies:
   '@iconify-icons/ri': registry.npmmirror.com/@iconify-icons/ri/1.2.3
   '@iconify/vue': registry.npmmirror.com/@iconify/vue/3.2.1_vue@3.2.37
   '@types/lodash-es': registry.npmmirror.com/@types/lodash-es/4.17.6
+  '@types/mockjs': registry.npmmirror.com/@types/mockjs/1.0.6
   '@types/nprogress': registry.npmmirror.com/@types/nprogress/0.2.0
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.33.1_vsoshirnpb7xw6mr7xomgfas2i
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
@@ -85,6 +86,7 @@ devDependencies:
   postcss: registry.npmmirror.com/postcss/8.4.16
   postcss-import: registry.npmmirror.com/postcss-import/14.1.0_postcss@8.4.16
   prettier: registry.npmmirror.com/prettier/2.7.1
+  rimraf: registry.npmmirror.com/rimraf/3.0.2
   rollup: registry.npmmirror.com/rollup/2.78.1
   sass: registry.npmmirror.com/sass/1.54.4
   typescript: registry.npmmirror.com/typescript/4.7.4
@@ -1020,6 +1022,7 @@ packages:
     resolution: {integrity: sha512-Yu5YlqbYZyqsd6LjO4e8ONJDN9pTSnciHDcRP4teNOh/au2b8helFhgRx+3w8xsTFEnwr9jtfTVJbAx+eYmlHA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/mockjs/-/mockjs-1.0.6.tgz}
     name: '@types/mockjs'
     version: 1.0.6
+    dev: true
 
   registry.npmmirror.com/@types/node/18.7.9:
     resolution: {integrity: sha512-0N5Y1XAdcl865nDdjbO0m3T6FdmQ4ijE89/urOHLREyTXbpMWbSafx9y7XIsgWGtwUP2iYTinLyyW3FatAxBLQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.7.9.tgz}

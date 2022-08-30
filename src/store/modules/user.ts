@@ -16,4 +16,5 @@ export const useUserStore = defineStore("user", {
   }
 });
 
+// 在setup以外使用
 export const useUserStoreWithoutSetup = () => useUserStore(store);

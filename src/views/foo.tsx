@@ -23,10 +23,9 @@ export const Foo = defineComponent({
     const userInfoWithoutSetup = useUserStoreWithoutSetup();
     xxx.value = userInfoWithoutSetup.userName;
     const cl = () => {
-      useUserStoreWithoutSetup().modifyUserName("edit-Admin");
+      useUserStore().modifyUserName("edit-Admin");
       xxx.value = userInfo.userName;
     };
-    console.log("xxxx", userInfo.userName);
     return () => (
       <>
         {xxx.value}
