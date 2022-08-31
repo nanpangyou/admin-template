@@ -1,4 +1,3 @@
-import { ElMenuItem, ElSubMenu } from "element-plus";
 import { defineComponent, PropType } from "vue";
 import { RouterLink } from "vue-router";
 import type { childrenType } from "../types";

@@ -9,7 +9,7 @@ import removeConsole from "vite-plugin-remove-console";
 // doc: https://www.npmjs.com/package/vite-svg-loader
 import svgLoader from "vite-svg-loader";
 import vueSetupExtend from "vite-plugin-vue-setup-extend";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 // 路径查找
 const pathResolve = (dir: string): string => {
   return resolve(__dirname, ".", dir);
@@ -26,18 +26,24 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       alias
     },
     plugins: [
+      vue(),
       AutoImport({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [NaiveUiResolver()],
+        imports: [
+          "vue",
+          {
+            "naive-ui": ["useDialog", "useMessage", "useNotification", "useLoadingBar"]
+          }
+        ]
       }),
       Components({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [NaiveUiResolver()]
       }),
       vueJsx({
         // options are passed on to @vue/babel-plugin-jsx
         mergeProps: true,
         transformOn: true
       }),
-      vue(),
       removeConsole(),
       viteMockServe({
         mockPath: "mock",

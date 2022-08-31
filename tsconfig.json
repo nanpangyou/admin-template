@@ -24,7 +24,7 @@
       "@build/*": ["build/*"],
       "/#/*": ["types/*"]
     },
-    "types": ["vite/client", "element-plus/global"],
+    "types": ["vite/client"],
     "typeRoots": ["./node_modules/@types/", "./types"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.d.ts", "mock/*.ts", "vite.config.ts"],

@@ -5,7 +5,6 @@ import { setupStore } from "/@/store/index";
 // 引入重置样式
 import "./theme/reset.scss";
 import "./theme/index.scss";
-import "element-plus/dist/index.css";
 // 导入字体图标
 import "./assets/iconfont/iconfont.js";
 import "./assets/iconfont/iconfont.css";
